@@ -14,13 +14,77 @@
     <script src="js/jquery-3.6.3.min.js"></script>
     <style>
         /* tulis kode CSS internal di bawah sini */
-        .bg-nav{
-            background-color: #862B0D;
-        }
+      .bg-nav{
+        background-color: #862B0D;
+      }
+      #rumah{
+        background-image: url(images/background/bgkopi.png);
+        
+      }
+      
+      .navbar {
+          background-color: #803d28;
+      }
+
+      .btn-wa {
+          background: white;
+          color: black;
+          padding: 4px 8px;
+          border-radius: 8px;
+          text-decoration: none;
+      }
+
+      hr.border-line {
+          background: #803d28 !important;
+          width: 100%;
+          height: 5px;
+      }
+
+      .btn-buy {
+          background-color: #b05c43;
+          color: white;
+      }
+
+      .btn-buy:hover {
+          background-color: #803d28;
+          color: white;
+      }
+
+    
+      span.search {
+          background-color: #b05c43;
+      }
+
+      footer {
+          background-color: #803d28;
+      }
+
+      
+
+      @media (max-width: 768px) {
+
+          .select-menu {
+              flex-wrap: wrap;
+              justify-content: space-evenly;
+          }
+
+          .form-select {
+              width: 100%;
+          }
+
+          ul.nav {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+          }
+      }
+
 
 
         /* Batas Akhir penulisan kode CSS internal */
     </style>
+
+
 </head>
 
 <body>
@@ -50,8 +114,7 @@
                     </li>
 
                 </ul>
-                <a class="btn btn-outline-light ms-md-3" href="#">
-                    <i class="bi bi-cart4"></i> Shop
+                <a class="btn btn-outline-light ms-md-3" href="index.html">Home
                 </a>
                 <a class="btn btn-outline-light ms-md-3" href="https://wa.me/081290465033">
                     <i class="bi bi-whatsapp"></i> Chat
@@ -61,42 +124,173 @@
         </div>
     </nav>
 
-    <section class="riki-block produk text-center my-3 py-5">
+    <section id="rumah" class="riki-block produk text-center my-3 py-5">
         <div class="container">
           <h1>Pilih Produk Anda</h1>
           <p class="fs-4">Kualitas terbaik biji kopi pilihan, fresh diambil langsung dari petani</p>
           <hr class="border border-success border-dark opacity-75 mb-7">
     
           <!-- Ini Untuk Select -->
-    
-          <div class="form-floating col-md-4 mx-auto">
-            <select class="form-select" id="select_kopi" aria-label="Floating label select example">
-                <option selected disabled>-</option>
-                <option value="arabica">Arabica</option>
-                <option value="robusta">Robusta</option>
-                <option value="nonkopi">Non Kopi</option>
-            </select>
-            <label for="select_kopi">Pilih Jenis Kopi</label>
-        </div>
 
+
+        <div class="container">
+          <div class="select-menu d-flex gap-4">
+              <div class="input-group rounded">
+                  <input type="search" id="searchInput" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon">
+                      <span class="input-group-text search" id="search-addon">
+                          <i class="bi bi-search text-white"></i>
+                      </span>
+              </div>
+              <div class="form-floating col col-md-3">
+                  <select class="form-select" id="select_kopi" aria-label="Floating label select example">
+                      <option value="semua">semua produk</option>
+                      <option value="arabica">Arabica</option>
+                      <option value="robusta">Robusta</option>
+                      <option value="nonkopi">Non kopi</option>
+                  </select>
+                  <label for="select_kopi">Pilih Jenis Kopi</label>
+              </div>
+              <div class="form-floating col col-md-3">
+                  <select class="form-select" id="sortSelect" aria-label="Floating label select example">
+                      <option value="asc">Termurah</option>
+                      <option value="desc">Termahal</option>
+                  </select>
+                  <label for="sortSelect">Urutan Harga:</label>
+              </div>
+  
+  
+  
+          </div>
           <div id="baris_produk" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 text-center mt-5">
             <div class="col mb-4">
               <div class="card">
                 <img src="images/produk/product_capuchino.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Cappuchino</h5>
+                  <h5 class="card-title">Cappuchino Arabica</h5>
+                  <div class="row hargasize my-4">
+                    <div class="col">
+                      500 ml
+                    </div>
+                    <div class="col fw-bold text-primary">
+                      200.000
+                    </div>
+                  </div>
+                  <a href="https://www.google.com/search?q=cappuccino+arabica&tbm=shop" class="btn btn-dark w-100"><i class="bi bi-basket"></i> Beli</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col mb-4">
+              <div class="card">
+                <img src="images/produk/product_espresso.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Pahit Arabica</h5>
                   <div class="row hargasize my-4">
                     <div class="col">
                       100 ml
                     </div>
                     <div class="col fw-bold text-primary">
-                      15.000
+                      100.000
                     </div>
                   </div>
-                  <a href="#" class="btn btn-dark w-100"><i class="bi bi-basket"></i> Beli</a>
+                  <a href="https://www.google.com/search?q=pahit+arabica&tbm=shop" class="btn btn-dark w-100"><i class="bi bi-basket"></i> Beli</a>
                 </div>
               </div>
             </div>
+
+            <div class="col mb-4">
+              <div class="card">
+                <img src="images/produk/product_latte.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Latte Arabica</h5>
+                  <div class="row hargasize my-4">
+                    <div class="col">
+                      150 ml
+                    </div>
+                    <div class="col fw-bold text-primary">
+                      150.000
+                    </div>
+                  </div>
+                  <a href="https://www.google.com/search?q=latte+arabica&tbm=shop" class="btn btn-dark w-100"><i class="bi bi-basket"></i> Beli</a>
+                </div>
+              </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card">
+              <img src="images/produk/product_kopi_susu.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Kopsus Robusta</h5>
+                <div class="row hargasize my-4">
+                  <div class="col">
+                    100 ml
+                  </div>
+                  <div class="col fw-bold text-primary">
+                    500.000
+                  </div>
+                </div>
+                <a href="https://www.google.com/search?q=kopi+susu+robusta&tbm=shop" class="btn btn-dark w-100"><i class="bi bi-basket"></i> Beli</a>
+              </div>
+          </div>          
+          </div>
+
+          <div class="col mb-4">
+            <div class="card">
+              <img src="images/produk/product_latte.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Latte Robusta</h5>
+                <div class="row hargasize my-4">
+                  <div class="col">
+                    150 ml
+                  </div>
+                  <div class="col fw-bold text-primary">
+                    150.000
+                  </div>
+                </div>
+                <a href="https://www.google.com/search?q=latte+robusta&tbm=shop" class="btn btn-dark w-100"><i class="bi bi-basket"></i> Beli</a>
+              </div>
+          </div>
+          </div>
+
+          <div class="col mb-4">
+            <div class="card">
+              <img src="images/produk/smoothie1.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Raspberry Smoothie</h5>
+                <div class="row hargasize my-4">
+                  <div class="col">
+                    100 ml
+                  </div>
+                  <div class="col fw-bold text-primary">
+                    200.000
+                  </div>
+                </div>
+                <a href="https://www.google.com/search?q=raspberry+smoothie&tbm=shop" class="btn btn-dark w-100"><i class="bi bi-basket"></i> Beli</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col mb-4">
+            <div class="card">
+              <img src="images/produk/smoothie2.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Watermelon Smoothie</h5>
+                <div class="row hargasize my-4">
+                  <div class="col">
+                    150 ml
+                  </div>
+                  <div class="col fw-bold text-primary">
+                    150.000
+                  </div>
+                </div>
+                <a href="https://www.google.com/search?q=watermelon+smoothie&tbm=shop" class="btn btn-dark w-100"><i class="bi bi-basket"></i> Beli</a>
+              </div>
+            </div>
+          </div>
+
+          
+
+
+
       </section>
 
       <footer class="riki-block footer-small py-4 bg-nav fw-bold">
@@ -133,28 +327,61 @@
     <!-- Batas Akhir penulisan kode Bootstrap -->
     <script>
         /* Tulis Javascript Di bawah Sini */
-        const sumber = "https://rikikurnia.com/prakerja/api/kopi"
-        const sumber2 = "data.json"
-        var data_kopi = []
-        var data_pilihan = []
+        var sumber = "https://rikikurnia.com/prakerja/api/kopi";
+        var sumber2 = "data.json";
+        var sortSelect = $("#sortSelect");
 
-        $.getJSON(sumber2).then(function (data) {
-            data_kopi = data
-            console.log(data_kopi)
-        })
+        $("#select_kopi").on("change", function () {
+            var dipilih = $(this).val();
+            ambilData(dipilih);
+        });
 
-        select_kopi.onchange = function () {
-            let pilihan = select_kopi.value
-            console.log(pilihan)
-            data_pilihan = data_kopi[pilihan]
-            console.log(data_pilihan)
-            updateTampilan()
-        }
+        $("#searchInput").on("input", function () {
+            var dipilih = $("#select_kopi").val();
+            var searchTerm = $(this).val();
+            ambilData(dipilih, searchTerm);
+        });
 
-        function updateTampilan() {
-            baris_produk.innerHTML = ""
-            data_pilihan.forEach(item => {
-                baris_produk.innerHTML += `<div class="col mb-3">
+        sortSelect.on("change", function () {
+            var dipilih = $("#select_kopi").val();
+            var searchTerm = $("#searchInput").val();
+            var sortOrder = $(this).val();
+            ambilData(dipilih, searchTerm, sortOrder);
+        });
+
+        function ambilData(dipilih, searchTerm = "", sortOrder = "asc") {
+            var template = "";
+            $.getJSON(sumber2).done(function (data) {
+                var data_kopi = [];
+
+                if (dipilih == "semua") {
+                    data_kopi.push(...data.arabica);
+                    data_kopi.push(...data.robusta);
+                    data_kopi.push(...data.nonkopi);
+                } else {
+                    data_kopi = data[dipilih];
+                }
+
+                if (searchTerm !== "") {
+                    data_kopi = data_kopi.filter(function (item) {
+                        return (
+                            item.nama.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                            item.size.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                            item.harga.toString().includes(searchTerm)
+                        );
+                    });
+                }
+
+                data_kopi.sort(function (a, b) {
+                    if (sortOrder === "asc") {
+                        return a.harga - b.harga;
+                    } else {
+                        return b.harga - a.harga;
+                    }
+                });
+
+                data_kopi.forEach(function (item) {
+                    template += `<div class="col mb-3">
                     <div class="card">
                         <img src="${item.foto}" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -170,9 +397,14 @@
                             <a href="${item.link}" class="btn btn-dark w-100"><i class="bi bi-basket"></i> Beli</a>
                         </div>
                     </div>
-                </div>`
-            })
+                </div>`;
+                });
+
+                $("#baris_produk").html(template);
+            });
         }
+
+        ambilData("semua");
 
 
 

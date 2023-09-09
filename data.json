@@ -27,15 +27,15 @@
             "foto": "images/produk/smoothie1.jpeg",
             "nama": "Raspberry Smoothie",
             "size": "100 ml",
-            "harga": "500.000",
-            "link": "https://www.google.com/search?q=kopi+susu+robusta&tbm=shop"
+            "harga": "200.000",
+            "link": "https://www.google.com/search?q=raspberry+smoothie&tbm=shop"
         },
         {
             "foto": "images/produk/smoothie2.jpeg",
             "nama": "Watermelon Smoothie",
             "size": "150 ml",
             "harga": "150.000",
-            "link": "https://www.google.com/search?q=latte+robusta&tbm=shop"
+            "link": "https://www.google.com/search?q=watermelon+smoothie&tbm=shop"
         }
     ],
     "robusta": [
